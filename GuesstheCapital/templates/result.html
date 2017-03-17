@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block naslov %}
+Guees The Capital | Result
+{% endblock %}
+
+
+{% block vsebina %}
+{% if rezultat %}
+<img src="/assets/img/correct.jpg" height="300px">
+<p>Your answer is correct. {{ item.glavnomesto }} is indeed the capital of {{ item.drzava }}!</p>
+{% else %}
+<img src="/assets/img/wrong.jpg" height="300px">
+    <p>Sorry, your answer is wrong... The capital of {{ item.drzava }} is {{ item.glavnomesto }}!</p>
+{% endif %}
+<p><a class="btn btn-primary btn-lg" href="/">Try Again</a></p>
+{% endblock %}

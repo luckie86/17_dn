@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block naslov %}
+Guees The Capital | Home
+{% endblock %}
+
+
+{% block vsebina %}
+<img src="{{ glavno_mesto.slika }}" width="500px">
+
+<h3>What is the capital city of {{ glavno_mesto.drzava }}?</h3>
+
+<form method="post" action="/result">
+    <input type= "text" name="odgovor" placeholder="Enter the capital">
+    <input type="hidden" value="{{ glavno_mesto.drzava }}" name="drzava">
+    <button type="submit"> Submit </button>
+</form>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{% block naslov %} {% endblock naslov %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Hello, world!</h1>
+            <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        </div>
+
+        <ul class="nav nav-pills">
+            <li role="presentation" {% block omeni %} {% endblock omeni %}><a href="index.html">O meni</a></li>
+            <li role="presentation" {% block mojiprojekti %} {% endblock mojiprojekti %}><a href="mojiprojekti.html">Moji Projekti</a></li>
+            <li role="presentation" {% block blog %} {% endblock blog %}><a href="blog.html">Blog</a></li>
+            <li role="presentation" {% block kontakt %} {% endblock kontakt %}><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+
+        {% block vsebina %} {% endblock %}
+
+    </div>
+
+
+</body>
+
+</html>
