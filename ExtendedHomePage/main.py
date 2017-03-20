@@ -45,8 +45,7 @@ class MojiProjektiHandler(BaseHandler):
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
-    webapp2.Route('/index.html', MainHandler),
-    webapp2.Route('/blog.html', BlogHandler),
-    webapp2.Route('/kontakt.html', KontaktHandler),
-    webapp2.Route('/mojiprojekti.html', MojiProjektiHandler),
+    webapp2.Route('/blog', BlogHandler),
+    webapp2.Route('/kontakt', KontaktHandler),
+    webapp2.Route('/mojiprojekti', MojiProjektiHandler),
 ], debug=True)

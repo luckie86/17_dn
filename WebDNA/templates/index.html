@@ -1,28 +1,14 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Web DNA Analyzer</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
+{% block naslov %}
+Web DNA Analyzer | Home
+{% endblock naslov %}
 
-<body>
+{% block vsebina %}
+<form method="post" action="/result">
+    <textarea name="dna" placeholder="Prosim vstavite DNK-a osumljenca"></textarea>
+    <button type="submit"> Preveri! </button>
+</form>
+{% endblock vsebina %}
 
-    <div class="container">
 
-        <div class="jumbotron">
-            <h1>Slovenski Nacionalni Preiskovalni Urad</h1>
-            <p> Dobrodošli v program za analizo DNK </p>
-        </div>
-
-        <form method="post" action="/result">
-            <textarea name="dna" placeholder="Prosim vstavite DNK-a osumljenca"></textarea>
-            <button type="submit"> Preveri! </button>
-        </form>
-
-    </div>
-
-</body>
-
-</html>

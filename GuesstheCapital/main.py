@@ -2,7 +2,7 @@
 import os
 import jinja2
 import webapp2
-import random
+from random import randint
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -43,7 +43,7 @@ def podatki():
 
 class MainHandler(BaseHandler):
     def get(self):
-        glavno_mesto = podatki()[random.randint(0,4)]
+        glavno_mesto = podatki()[randint(0,4)]
         glavno_mesto_dict = {"glavno_mesto": glavno_mesto}
         return self.render_template("index.html", glavno_mesto_dict)
 

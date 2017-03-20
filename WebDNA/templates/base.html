@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block naslov %} {% endblock naslov %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Slovenski Nacionalni Preiskovalni Urad</h1>
+            <p> Dobrodošli v program za analizo DNK </p>
+        </div>
+
+        {% block vsebina %} {% endblock %}
+
+    </div>
+
+</body>
+
+</html>
